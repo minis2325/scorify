@@ -1,17 +1,13 @@
-Object-Oriented Programming (OOP) is a programming paradigm that organizes software using objects, which contain data and methods. OOP helps developers build modular, reusable, and maintainable applications.
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects to design software. An object contains both data and methods. OOP helps developers build modular, reusable, and maintainable applications.
 
-The four fundamental principles of OOP are:
+The four principles of Object-Oriented Programming are:
 
-1. Encapsulation
-Encapsulation is the process of combining data and methods into a single unit called a class. It protects data by restricting direct access and allowing controlled access through methods.
+1. Encapsulation - Encapsulation combines data and methods into a single class and restricts direct access to data, improving security.
 
-2. Abstraction
-Abstraction hides unnecessary implementation details and exposes only the essential features of an object. This reduces complexity and improves usability.
+2. Abstraction - Abstraction hides implementation details and exposes only the necessary functionality, making programs easier to understand.
 
-3. Inheritance
-Inheritance enables one class to acquire the properties and behaviors of another class. It promotes code reuse and reduces duplication.
+3. Inheritance - Inheritance allows a class to inherit properties and methods from another class, promoting code reuse and reducing duplication.
 
-4. Polymorphism
-Polymorphism allows objects to perform different actions using the same interface. Method overriding and method overloading are common examples.
+4. Polymorphism - Polymorphism allows the same method or interface to perform different operations depending on the object.
 
-Advantages of OOP include better code organization, improved maintainability, code reusability, scalability, modularity, and easier debugging. OOP is widely used in software development because it simplifies the design of large and complex systems.
+These principles improve software development by increasing code reusability, maintainability, flexibility, scalability, and reducing development effort.
