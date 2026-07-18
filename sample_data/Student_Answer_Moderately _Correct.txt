@@ -1,0 +1,13 @@
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects to develop software. Objects contain both data and methods. OOP helps create modular, reusable, and maintainable applications.
+
+The four main principles of OOP are encapsulation, abstraction, inheritance, and polymorphism.
+
+Encapsulation combines data and methods into a class and restricts direct access to the data, improving security.
+
+Abstraction hides implementation details and provides only the required functionality, making programs easier to use.
+
+Inheritance allows one class to inherit properties and methods from another class, promoting code reuse and reducing duplicate code.
+
+Polymorphism allows the same method to perform different operations depending on the object.
+
+These principles make software more reusable, maintainable, flexible, scalable, and easier to develop.

@@ -73,7 +73,9 @@ The `sample_data` folder contains example files that can be used to test the app
 
 - `Question.txt`
 - `Model_Answer.txt`
-- `Student_Answer.txt`
+- `Student_Answer_Perfect.txt`
+- `Student_Answer_Moderately_Correct.txt`
+- `Student_Answer_Poor.txt`
 
 ---
 

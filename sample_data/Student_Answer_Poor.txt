@@ -1,0 +1,9 @@
+Object-Oriented Programming (OOP) is a programming language used to write computer programs.
+
+It uses objects to store data.
+
+Inheritance is used to copy code from another class.
+
+Encapsulation keeps data together.
+
+OOP makes programming easy.
