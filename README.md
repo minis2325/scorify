@@ -56,7 +56,7 @@ scorify/
 │   ├── Model_Answer.txt
 │   └── Student_Answer.txt
 │
-├── local_s3_storage/
+├── local_storage/
 │
 ├── app.py
 ├── evaluate.py
@@ -98,9 +98,3 @@ The `sample_data` folder contains example files that can be used to test the app
 - Improve evaluation accuracy
 - Store evaluation history in a database
 - Enhance the user interface
-
----
-
-## Author
-
-Developed as an academic project using Python and Flask.
