@@ -5,7 +5,7 @@ Scorify is a Flask-based subjective answer evaluation system that compares a stu
 ---
 ## Live Demo
 
-🔗 https://your-render-url.onrender.com
+🔗 https://scorify-anow.onrender.com
 
 ---
 ## Features
