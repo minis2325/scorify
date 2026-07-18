@@ -1,0 +1,13 @@
+Object-Oriented Programming is a programming method where software is built using objects instead of only functions. Objects contain both data and functions that work together.
+
+The four important concepts of OOP are encapsulation, abstraction, inheritance, and polymorphism.
+
+Encapsulation protects data by keeping variables private and providing controlled access through methods.
+
+Abstraction hides unnecessary implementation details from the user while showing only important functionality.
+
+Inheritance allows a class to reuse the properties and methods of another class, reducing duplicate code.
+
+Polymorphism allows the same method name to perform different tasks depending on the object or input.
+
+OOP improves software development by making programs modular, reusable, easier to maintain, and easier to extend as applications grow.

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-orb orb-three"></div>
+    <main class="page">
+        <header class="hero">
+            <div>
+                <p class="overline">Scorify – Text-Based Answer Evaluation System</p>
+                <h1>Pay-as-you-go grading for digital scripts.</h1>
+                <p class="subtitle">Upload answers, get instant marks, and a compute invoice that scales with complexity.</p>
+            </div>
+            <div class="hero-card">
+                <div>
+                    <h3>Pricing Logic</h3>
+                    <ul>
+                        <li>Text: Base Rs 5 + Rs 1 per word</li>
+                        <li>File: Base Rs 10 + Rs 5 per 500 words</li>
+                        <li>+ Rs 15 if file &gt; 1 MB</li>
+                    </ul>
+                </div>
+                <div class="badge">PAYG</div>
+            </div>
+        </header>
+
+        <section id="welcomePanel" class="panel welcome">
+            <div class="panel-header">
+                <h2>Welcome</h2>
+                <p class="helper">Choose how you want to evaluate.</p>
+            </div>
+            <div class="welcome-grid">
+                <button class="welcome-card" data-target="single">
+                    <h3>Single Evaluation</h3>
+                    <p>Evaluate one student response with an instant invoice.</p>
+                </button>
+                <button class="welcome-card" data-target="batch">
+                    <h3>Batch Evaluation</h3>
+                    <p>Process multiple scripts together and view the cost spike.</p>
+                </button>
+            </div>
+        </section>
+
+        <section id="singlePanel" class="panel hidden">
+            <div class="panel-header">
+                <h2>Single Evaluation</h2>
+                <div class="toggle">
+                    <label>
+                        <input type="radio" name="inputMode" value="text" checked>
+                        <span>Text</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="inputMode" value="file">
+                        <span>File</span>
+                    </label>
+                </div>
+                <button type="button" class="ghost-btn mode-reset">Change mode</button>
+            </div>
+
+            <div id="textSection" class="grid-two">
+                <div class="field">
+                    <label for="modelText">Model Answer</label>
+                    <textarea id="modelText" placeholder="Paste the model answer"></textarea>
+                </div>
+                <div class="field">
+                    <label for="studentText">Student Answer</label>
+                    <textarea id="studentText" placeholder="Paste the student answer"></textarea>
+                </div>
+            </div>
+
+            <div id="fileSection" class="grid-two hidden">
+                <div class="field">
+                    <label for="modelFile">Model Answer File (TXT or PDF)</label>
+                    <div id="modelDrop" class="drop-zone">
+                        <input type="file" id="modelFile" accept=".txt,.pdf">
+                        <p>Drag a file here or click to browse.</p>
+                        <span id="modelFileName">No file selected</span>
+                    </div>
+                    <button type="button" id="modelFileClear" class="ghost-btn">Remove file</button>
+                </div>
+                <div class="field">
+                    <label for="studentFile">Student File (TXT or PDF)</label>
+                    <div id="singleDrop" class="drop-zone">
+                        <input type="file" id="studentFile" accept=".txt,.pdf">
+                        <p>Drag a file here or click to browse.</p>
+                        <span id="singleFileName">No file selected</span>
+                    </div>
+                    <button type="button" id="studentFileClear" class="ghost-btn">Remove file</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="evalBtn">Evaluate</button>
+                <span id="singleStatus" class="status"></span>
+            </div>
+
+            <div id="invoice" class="invoice hidden"></div>
+            <div class="download-row hidden" id="invoiceDownloads">
+                <button id="downloadPdf" type="button">Download PDF</button>
+                <button id="downloadJson" type="button" class="ghost-btn">Download JSON</button>
+            </div>
+            <div id="contentPreview" class="content-preview hidden"></div>
+        </section>
+
+        <section id="batchPanel" class="panel hidden">
+            <div class="panel-header">
+                <h2>Batch Processing</h2>
+                <p class="helper">Upload multiple student scripts and see the cost spike.</p>
+                <button type="button" class="ghost-btn mode-reset">Change mode</button>
+            </div>
+
+            <div class="grid-two">
+                <div class="field">
+                    <label for="batchModelText">Model Answer (Text)</label>
+                    <textarea id="batchModelText" placeholder="Paste a shared model answer"></textarea>
+                    <div class="mini-divider">or</div>
+                    <div id="batchModelDrop" class="drop-zone">
+                        <input type="file" id="batchModelFile" accept=".txt,.pdf" aria-label="Batch model answer file">
+                        <p>Drag a file here or click to browse.</p>
+                        <span id="batchModelFileName">No file selected</span>
+                    </div>
+                    <button type="button" id="batchModelFileClear" class="ghost-btn">Remove file</button>
+                </div>
+                <div class="field">
+                    <label>Student Files</label>
+                    <div id="batchDrop" class="drop-zone">
+                        <input type="file" id="batchFiles" accept=".txt,.pdf" multiple aria-label="Batch student files">
+                        <p>Drop multiple files here or click to upload.</p>
+                        <span id="batchFileName">No files selected</span>
+                    </div>
+                    <button type="button" id="batchFilesClear" class="ghost-btn">Remove files</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="batchBtn">Run Batch</button>
+                <span id="batchStatus" class="status"></span>
+            </div>
+
+            <div id="batchProgress" class="progress hidden">
+                <div id="batchProgressBar" class="progress-bar"></div>
+            </div>
+
+            <div id="batchSummary" class="batch-summary hidden"></div>
+            <div class="download-row hidden" id="batchDownloads">
+                <button id="downloadCsv" type="button">Download CSV</button>
+            </div>
+            <div id="batchModelPreview" class="content-preview hidden"></div>
+            <div id="batchList" class="batch-list"></div>
+        </section>
+
+        <section id="historyPanel" class="panel hidden">
+            <div class="panel-header">
+                <h2>Recent Evaluations</h2>
+                <p class="helper">Track recent scores and spending.</p>
+            </div>
+            <div class="history-total" id="historyTotal">Total Spend: Rs 0</div>
+            <div id="historyList" class="history-list"></div>
+        </section>
+
+        <section id="storagePanel" class="panel hidden">
+            <div class="panel-header">
+                <h2>Local Storage</h2>
+                <div class="actions">
+                    <button id="refreshStorage" type="button" class="ghost-btn">Refresh</button>
+                </div>
+            </div>
+            <div id="storageList" class="storage-list"></div>
+            <div id="storagePreview" class="content-preview hidden"></div>
+        </section>
+    </main>
+
+    <script src="/frontend/script.js"></script>
+</body>
+</html>

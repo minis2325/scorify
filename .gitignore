@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Uploaded answer scripts
+local_s3_storage/*
+!local_s3_storage/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db

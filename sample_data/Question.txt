@@ -1,0 +1,4 @@
+Question:
+Explain the concept of Object-Oriented Programming (OOP). Discuss its four main principles and explain how they help in developing software applications.
+
+Maximum Marks: 10
