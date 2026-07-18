@@ -3,7 +3,11 @@
 Scorify is a Flask-based subjective answer evaluation system that compares a student's answer with a model answer and generates an evaluation score along with detailed feedback. The application uses multiple text similarity techniques to assess answer quality through an intuitive web interface.
 
 ---
+## Live Demo
 
+🔗 https://your-render-url.onrender.com
+
+---
 ## Features
 
 - Evaluate subjective answers against a model answer
@@ -63,41 +67,6 @@ scorify/
 ```
 
 ---
-
-## Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/scorify.git
-```
-
-### 2. Navigate to the project directory
-
-```bash
-cd scorify
-```
-
-### 3. Install the required dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the application
-
-```bash
-python app.py
-```
-
-### 5. Open your browser
-
-```
-http://localhost:5000
-```
-
----
-
 ## Sample Data
 
 The `sample_data` folder contains example files that can be used to test the application:
